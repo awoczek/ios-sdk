@@ -3,11 +3,11 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRBaseModel.h"
-#import "SNRVoucherStatus.h"
+#import <SyneriseSDK/SNRBaseModel.h>
+#import <SyneriseSDK/SNRVoucherCodeStatus.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +19,7 @@ NS_SWIFT_NAME(VoucherCodesData)
 @interface SNRVoucherCodesData : SNRBaseModel
 
 @property (copy, nonatomic, nonnull, readonly) NSString *code;
-@property (assign, nonatomic, readonly) SNRVoucherStatus status;
+@property (assign, nonatomic, readonly) SNRVoucherCodeStatus status;
 @property (copy, nonatomic, nullable, readonly) NSString *clientId;
 @property (copy, nonatomic, nonnull, readonly) NSString *clientUuid;
 @property (copy, nonatomic, nonnull, readonly) NSString *poolUuid;

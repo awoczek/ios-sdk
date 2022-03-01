@@ -3,17 +3,17 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNREvent.h"
+#import <SyneriseSDK/SNREvent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @class SNRPushClickedEvent
  *
- * Represents a 'client clicked push' event. It is used for push message interaction tracking.
+ * Represents a 'client clicked push' event.
  */
 
 NS_SWIFT_NAME(PushClickedEvent)

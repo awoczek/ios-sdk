@@ -3,17 +3,29 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNREvent.h"
+#import <SyneriseSDK/SNREvent.h>
 
 @class SNRUnitPrice;
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * @class SNRCartEvent
+ *
+ * Represents a base class for cart events.
+ *
+ * @note This is an abstract class and it is not meant to be instantiated directly. You should use concrete `SNRCartEvent` subclasses instead.
+ */
+
 NS_SWIFT_NAME(CartEvent)
 @interface SNRCartEvent : SNREvent
+
++ (instancetype)new NS_UNAVAILABLE;
+- (instancetype)initWithLabel:(nonnull NSString *)label andParams:(nullable SNRTrackerParams *)params NS_UNAVAILABLE;
+- (instancetype)initWithLabel:(nonnull NSString *)label NS_UNAVAILABLE;
 
 - (instancetype)initWithLabel:(NSString *)label
                                   sku:(NSString *)sku

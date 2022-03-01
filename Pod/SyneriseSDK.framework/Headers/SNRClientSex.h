@@ -3,8 +3,10 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @enum SNRClientSex
@@ -14,8 +16,11 @@ typedef NS_ENUM(NSUInteger, SNRClientSex) {
     SNRClientSexNotSpecified = 0,
     SNRClientSexMale,
     SNRClientSexFemale,
+    SNRClientSexOther,
 } NS_SWIFT_NAME(ClientSex);
 
 NSString * SNR_ClientSexToString(SNRClientSex type);
-SNRClientSex SNR_StringToClientSex(NSString *string);
+SNRClientSex SNR_StringToClientSex(NSString * _Nullable string);
+
+NS_ASSUME_NONNULL_END
 

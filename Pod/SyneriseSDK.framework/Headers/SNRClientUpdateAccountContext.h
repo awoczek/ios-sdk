@@ -3,12 +3,12 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRBaseContext.h"
-#import "SNRClientSex.h"
-#import "SNRClientAgreements.h"
+#import <SyneriseSDK/SNRBaseModel.h>
+#import <SyneriseSDK/SNRClientSex.h>
+#import <SyneriseSDK/SNRClientAgreements.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 NS_SWIFT_NAME(ClientUpdateAccountContext)
-@interface SNRClientUpdateAccountContext : SNRBaseContext
+@interface SNRClientUpdateAccountContext : SNRBaseModel
 
 @property (copy, nonatomic, nullable, readwrite) NSString *email;
 @property (copy, nonatomic, nullable, readwrite) NSString *phone;
@@ -35,13 +35,11 @@ NS_SWIFT_NAME(ClientUpdateAccountContext)
 @property (copy, nonatomic, nullable, readwrite) NSString *zipCode;
 @property (copy, nonatomic, nullable, readwrite) NSString *countryCode;
 @property (copy, nonatomic, nullable, readwrite) NSString *birthDate;
-@property (copy, nonatomic, nullable, readwrite) NSDate *lastActivityDate;
 @property (copy, nonatomic, nullable, readwrite) NSString *avatarUrl;
 
 @property (copy, nonatomic, nullable, readwrite) SNRClientAgreements *agreements;
 
 @property (copy, nonatomic, nullable, readwrite) NSDictionary *attributes;
-@property (copy, nonatomic, nullable, readwrite) NSArray<NSString *> *tags;
 
 @end
 

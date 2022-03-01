@@ -3,12 +3,12 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRBaseContext.h"
-#import "SNRClientSex.h"
-#import "SNRClientAgreements.h"
+#import <SyneriseSDK/SNRBaseModel.h>
+#import <SyneriseSDK/SNRClientSex.h>
+#import <SyneriseSDK/SNRClientAgreements.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,10 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 NS_SWIFT_NAME(ClientRegisterAccountContext)
-@interface SNRClientRegisterAccountContext : SNRBaseContext
+@interface SNRClientRegisterAccountContext : SNRBaseModel
 
-@property (copy, nonatomic, nullable, readwrite) NSString *email;
-@property (copy, nonatomic, nonnull, readwrite) NSString *password;
+@property (copy, nonatomic, nonnull, readonly) NSString *email;
+@property (copy, nonatomic, nonnull, readonly) NSString *password;
 
 @property (copy, nonatomic, nullable, readwrite) NSString *firstName;
 @property (copy, nonatomic, nullable, readwrite) NSString *lastName;
@@ -38,10 +38,9 @@ NS_SWIFT_NAME(ClientRegisterAccountContext)
 @property (copy, nonatomic, nullable, readwrite) SNRClientAgreements *agreements;
 
 @property (copy, nonatomic, nullable, readwrite) NSDictionary *attributes;
-@property (copy, nonatomic, nullable, readwrite) NSString *tags;
 
-- (instancetype)init __unavailable;
-+ (instancetype)new __unavailable;
++ (instancetype)new NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithEmail:(NSString *)email andPassword:(NSString *)password NS_SWIFT_NAME(init(email:password:));
 
