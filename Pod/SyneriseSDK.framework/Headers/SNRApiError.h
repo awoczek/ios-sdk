@@ -3,8 +3,10 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
+
+#import <SyneriseSDK/SNRError.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,24 +19,25 @@ typedef NS_ENUM(NSInteger, SNRApiErrorType) {
     SNRApiErrorTypeNetwork,
     SNRApiErrorTypeUnauthorizedSession,
     SNRApiErrorTypeHttp
-    
-} NS_SWIFT_NAME(SNRApiErrorType);
+};
 
 /**
  * @class SNRApiError
  */
 
-@interface SNRApiError : NSError
+@interface SNRApiError : SNRError
 
-@property (strong, nonatomic, nullable, readonly) NSArray<NSError *> *errors;
+@property (strong, nonatomic, nullable, readonly) NSArray<SNRError *> *errors;
 
 - (instancetype)initWithDomain:(NSErrorDomain)domain
                           code:(NSInteger)code
-                      userInfo:(nullable NSDictionary<NSErrorUserInfoKey, id> *)dict
-                        errors:(nullable NSArray *)errors;
+                     internalErrorCode:(nullable NSString *)internalErrorCode
+                      userInfo:(nullable NSDictionary<NSString *, id> *)userInfo
+                        errors:(nullable NSArray<SNRError *> *)errors;
 
 - (SNRApiErrorType)getType;
 - (NSInteger)getHttpCode;
+- (nullable NSString *)getErrorCode;
 - (nullable NSString *)getBody;
 
 @end

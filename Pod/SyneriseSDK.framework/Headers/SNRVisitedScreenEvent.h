@@ -3,10 +3,10 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNREvent.h"
+#import <SyneriseSDK/SNREvent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @class SNRVisitedScreenEvent
  *
  * Represents a 'client visited screen' event.
- *
- * @note This could be used for mobile screen usage tracking.
  */
 
 NS_SWIFT_NAME(VisitedScreenEvent)

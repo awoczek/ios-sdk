@@ -3,14 +3,15 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-FOUNDATION_EXPORT NSString * const SNRErrorUserInfoPathKey;
-FOUNDATION_EXPORT NSString * const SNRErrorUserInfoRejectedValueKey;
-FOUNDATION_EXPORT NSString * const SNRErrorUserInfoMessageKey;
+#import <SyneriseSDK/SNRErrorCode.h>
+#import <SyneriseSDK/SNRErrorUserInfoKey.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+FOUNDATION_EXPORT NSErrorDomain SNRErrorDomain;
 
 /**
  * @class SNRError

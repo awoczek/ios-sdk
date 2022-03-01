@@ -3,10 +3,10 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRBaseContext.h"
+#import <SyneriseSDK/SNRBaseModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 NS_SWIFT_NAME(ClientPasswordResetRequestContext)
-@interface SNRClientPasswordResetRequestContext : SNRBaseContext
+@interface SNRClientPasswordResetRequestContext : SNRBaseModel
 
 @property (copy, nonatomic, nonnull, readonly) NSString *email;
 
-- (instancetype)init __unavailable;
-+ (instancetype)new __unavailable;
++ (instancetype)new NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithEmail:(NSString *)email NS_SWIFT_NAME(init(email:));
 

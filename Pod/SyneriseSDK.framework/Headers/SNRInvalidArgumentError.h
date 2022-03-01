@@ -3,10 +3,10 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright (c) 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRError.h"
+#import <SyneriseSDK/SNRError.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

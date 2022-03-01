@@ -3,12 +3,12 @@
 //  SyneriseSDK
 //
 //  Created by Synerise
-//  Copyright © 2018 Synerise. All rights reserved.
+//  Copyright (c) 2021 Synerise. All rights reserved.
 //
 
-#import "SNRBaseModel.h"
-#import "SNRClientSex.h"
-#import "SNRClientAgreements.h"
+#import <SyneriseSDK/SNRBaseModel.h>
+#import <SyneriseSDK/SNRClientSex.h>
+#import <SyneriseSDK/SNRClientAgreements.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 NS_SWIFT_NAME(ClientAccountInformation)
-@interface SNRClientAccountInformation : SNRBaseModel
+@interface SNRClientAccountInformation : SNRBaseModel <NSSecureCoding>
 
 @property (assign, nonatomic, readonly) NSInteger clientId;
 @property (copy, nonatomic, nonnull, readonly) NSString *email;
@@ -41,7 +41,7 @@ NS_SWIFT_NAME(ClientAccountInformation)
 
 @property (assign, nonatomic, readonly) BOOL anonymous;
 
-@property (copy, nonatomic, nullable, readonly) SNRClientAgreements *agreements;
+@property (copy, nonatomic, nonnull, readonly) SNRClientAgreements *agreements;
 
 @property (copy, nonatomic, nullable, readonly) NSDictionary *attributes;
 @property (copy, nonatomic, nullable, readonly) NSArray<NSString *> *tags;
